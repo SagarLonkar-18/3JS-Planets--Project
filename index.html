@@ -5,64 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Planets</title>
   <!-- <link rel="stylesheet" href="./style.css"> -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden; /* Prevent scrollbars */
-        background-color: black;
-    }
-
-    #canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; /* Use consistent units */
-        height: 100%;
-    }
-    @font-face {
-      font-family: 'Bellina';
-      src: url('./fonts/Bellina.ttf') format('truetype');
-    }
-    /* Apply custom font */
-    #font-bellina {
-      font-family: 'Bellina', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="w-full h-screen overflow-hidden">
-    <div class="w-full h-screen absolute top-0 left-0 z-[2] text-white font-sans">
-      <nav class="w-full py-5 px-10 flex justify-between items-center">
-        <h3>Planets</h3>
-        <div class="flex gap-10 text-sm">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+  <div class="mainDiv">
+    <div class="contentDiv">
+      <nav class="navbar">
+        <p>Planets</p>
+        <div class="navbarElementsDiv">
+          <p>Home</p>
+          <p>About</p>
+          <p>Contact</p>
         </div>
       </nav>
-      <div id="font-bellina" class="absolute top-[13%] left-1/2 -translate-x-1/2 text-center font-bellina">
-        <div class="w-full h-[6em] overflow-hidden">
-          <h1 class="heading h-full text-8xl font-light tracking-tighter">Earth</h1>
-          <h1 class="heading h-full text-8xl font-light tracking-tighter">Scilla</h1>
-          <h1 class="heading h-full text-8xl font-light tracking-tighter">Volcanic</h1>
-          <h1 class="heading h-full text-8xl font-light tracking-tighter">Venus</h1>
+      <div id="font-bellina" class="headingMainDiv">
+        <div class="HeadingsDiv">
+          <h1 class="heading">Earth</h1>
+          <h1 class="heading">Scilla</h1>
+          <h1 class="heading">Volcanic</h1>
+          <h1 class="heading">Venus</h1>
         </div>
-        <p class="text-sm font-sans">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        <div class="w-96 h-px bg-gradient-to-r from-transparent via-white to-transparent mt-4"></div>
+        <p class="paraDiv">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="FadeLineDiv"></div>
       </div>
     </div>
     <canvas id="canvas"></canvas>
-
   </div>
-  <!-- <h1 class="text-white absolute top-0 left-0">This is a heading</h1> -->
   <script type="module" src="main.js"></script>
 </body>
 </html>

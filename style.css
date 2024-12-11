@@ -1,0 +1,99 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: black;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Bellina';
+    src: url('./fonts/Bellina.ttf') format('truetype');
+}
+
+#font-bellina {
+    font-family: 'Bellina', sans-serif;
+}
+
+.mainDiv {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contentDiv {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: white;
+    font-family: sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    padding: 1.25rem 2.5rem; /* py-5 px-10 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bellina', sans-serif;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.navbarElementsDiv {
+    display: flex;
+    gap: 2rem; /* gap-10 */
+    
+}
+
+.headingMainDiv {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Bellina', sans-serif;
+}
+
+.HeadingsDiv {
+    width: 100%;
+    height: 6em;
+    overflow: hidden;
+}
+
+.heading {
+    height: 100%;
+    font-size: 6rem; /* text-8xl */
+    font-weight: 300; /* font-light */
+    letter-spacing: -0.05em; /* tracking-tighter */
+}
+
+.paraDiv {
+    margin-top: 15px;
+    font-size: 0.875rem; /* text-sm */
+    font-family: 'Bellina', sans-serif;
+}
+
+.FadeLineDiv {
+    width: 24rem; /* w-96 */
+    height: 1px; /* h-px */
+    background: linear-gradient(to right, transparent, white, transparent); /* bg-gradient-to-r from-transparent via-white to-transparent */
+    margin-top: 1rem; /* mt-4 */
+}

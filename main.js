@@ -56,6 +56,9 @@ scene.add(starSphere);
 // Postioning of X = r*cos(theta)
 // Postioning of Z = r*sin(theta)    <-----
 
+// For rotation of all spheres 
+const spheresMesh = [];
+
 for(let i=0; i<4; i++) {
   const textureLoader = new THREE.TextureLoader();
   const texture = textureLoader.load(textures[i]);
@@ -69,6 +72,8 @@ for(let i=0; i<4; i++) {
   sphere.position.x = orbitRadius * Math.cos(angle);
   sphere.position.z = orbitRadius * Math.sin(angle);  
   spheres.add(sphere);
+
+  spheresMesh.push(sphere);
 }
 
 spheres.rotation.x = 0.1;
@@ -92,7 +97,7 @@ function throttledWheelHandler(event){
     const headings = document.querySelectorAll(".heading");
     gsap.to(headings,{
       duration:1,
-      y: `-=${100}%`,
+      y: `-=${105}%`,
       ease: "power2.inOut",
     });
 
@@ -105,7 +110,7 @@ function throttledWheelHandler(event){
       });
     }
 
-    // Rotating planets 
+    // Rotating planets when scrolled
     gsap.to(spheres.rotation,{
       y: `-=${Math.PI/2}`,
       duration:2,
@@ -114,28 +119,24 @@ function throttledWheelHandler(event){
 
   }
 }
-
 window.addEventListener("wheel", throttledWheelHandler)
-
-// Rotating up the planets 
-// setInterval(()=>{
-//   gsap.to(spheres.rotation,{
-//     y: `+=${Math.PI/2}`,
-//     duration:2,
-//     ease: 'expo.easeInOut'
-//   })
-// },2500)
-
 
 // Setting up the renderer
 const renderer = new THREE.WebGLRenderer({ canvas : document.querySelector("canvas"), antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-
 // Animation loop
+let clock = new THREE.Clock();
 function animate() {
   requestAnimationFrame(animate);
+
+  // rotating planets around themselves 
+  for(let i = 0; i < spheresMesh.length; i++){
+    const sphere = spheresMesh[i];
+    sphere.rotation.y = clock.getElapsedTime() * 0.02;
+  }
+
   renderer.render(scene, camera);
 }
 animate();
