@@ -55,12 +55,12 @@ html, body {
     font-family: 'Bellina', sans-serif;
     gap: 1.2rem;
     font-size: 0.9rem;
+    cursor:pointer;
 }
 
 .navbarElementsDiv {
     display: flex;
-    gap: 2rem; /* gap-10 */
-    
+    gap: 2rem; 
 }
 
 .headingMainDiv {
