@@ -27,10 +27,41 @@
         width: 100%; /* Use consistent units */
         height: 100%;
     }
+    @font-face {
+      font-family: 'Bellina';
+      src: url('./fonts/Bellina.ttf') format('truetype');
+    }
+    /* Apply custom font */
+    #font-bellina {
+      font-family: 'Bellina', sans-serif;
+    }
   </style>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+  <div class="w-full h-screen overflow-hidden">
+    <div class="w-full h-screen absolute top-0 left-0 z-[2] text-white font-sans">
+      <nav class="w-full py-5 px-10 flex justify-between items-center">
+        <h3>Planets</h3>
+        <div class="flex gap-10 text-sm">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      <div id="font-bellina" class="absolute top-[13%] left-1/2 -translate-x-1/2 text-center font-bellina">
+        <div class="w-full h-[6em] overflow-hidden">
+          <h1 class="heading h-full text-8xl font-light tracking-tighter">Earth</h1>
+          <h1 class="heading h-full text-8xl font-light tracking-tighter">Scilla</h1>
+          <h1 class="heading h-full text-8xl font-light tracking-tighter">Volcanic</h1>
+          <h1 class="heading h-full text-8xl font-light tracking-tighter">Venus</h1>
+        </div>
+        <p class="text-sm font-sans">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="w-96 h-px bg-gradient-to-r from-transparent via-white to-transparent mt-4"></div>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+
+  </div>
   <!-- <h1 class="text-white absolute top-0 left-0">This is a heading</h1> -->
   <script type="module" src="main.js"></script>
 </body>

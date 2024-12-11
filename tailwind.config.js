@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          bellina: ['Bellina', 'sans-serif'], // Define the font
+        },
+      },
   },
   plugins: [],
 };
