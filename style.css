@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Global Reset and Base Styles */
 * {
     margin: 0;
@@ -10,7 +11,8 @@ html, body {
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
     background-color: black;
-    font-family: 'Bellina';
+    /* font-family: 'Bellina'; */
+    font-family: "Playfair Display", serif;
 }
 
 #canvas {
@@ -44,7 +46,7 @@ html, body {
     left: 0;
     z-index: 2;
     color: white;
-    font-family: sans-serif;
+    font-family: "Playfair Display", serif;
 }
 
 .navbar {
@@ -53,7 +55,8 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Bellina', sans-serif;
+    /* font-family: 'Bellina', sans-serif; */
+    font-family: "Playfair Display", serif;
     gap: 1.2rem;
     font-size: 0.9rem;
     cursor:pointer;
@@ -70,7 +73,8 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-family: 'Bellina', sans-serif;
+    /* font-family: 'Bellina', sans-serif; */
+    font-family: "Playfair Display", serif;
 }
 
 .HeadingsDiv {
@@ -89,7 +93,8 @@ html, body {
 .paraDiv {
     margin-top: 15px;
     font-size: 0.875rem; /* text-sm */
-    font-family: 'Bellina', sans-serif;
+    /* font-family: 'Bellina', sans-serif; */
+    font-family: "Playfair Display", serif;
 }
 
 .FadeLineDiv {
