@@ -1,4 +1,3 @@
-import "./style.css";
 import * as THREE from "three"
 // import { RGBELoader } from "three/examples/jsm/Addons.js";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
